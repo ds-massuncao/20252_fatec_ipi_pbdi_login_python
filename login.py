@@ -27,3 +27,30 @@ def existe (usuario):
     return result != None
 
             
+def menu():
+    
+    texto = '0 - Fechar Sistema\n1 - Login\n2 - Logoff\n'
+    
+    usuario = None
+    
+    op = int(input(texto))
+    
+    while op != 0:
+        
+        if op == 1:
+            login = input('Login: ')
+            senha = input('Senha: ')
+            usuario = Usuario(login, senha)
+            print("Usuario OK!" if existe(usuario) else "Usuario Invalido!")
+        
+        if op == 2:
+            usuario = None
+            print("Logoff efetuado com sucesso!!!")
+        op == int(input(texto))
+        
+    else:
+        print("Até mais!!!")      
+        
+          
+menu()  
+             
